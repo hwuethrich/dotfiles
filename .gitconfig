@@ -1,3 +1,9 @@
+[user]
+
+	# User settings
+  email = hw@5px.ch
+  name = Hannes Wüthrich
+
 [alias]
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits
@@ -75,6 +81,8 @@
 	whitespace = fix
 
 [core]
+	# Use sublime text as editor (commit messages)
+	editor = subl
 
 	# Use custom `.gitignore` and `.gitattributes`
 	excludesfile = ~/.gitignore
@@ -113,6 +121,22 @@
 	added = yellow
 	changed = green
 	untracked = cyan
+
+[format]
+
+  pretty = %C(yellow)%h%Creset%C(green)%d%Creset %s %C(red)[%an]%Creset %C(cyan)[%cr]%Creset
+
+[rerere]
+
+  enabled = 1
+
+[push]
+
+  default = tracking
+
+[branch]
+
+  autosetuprebase = always
 
 [diff]
 
