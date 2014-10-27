@@ -54,5 +54,6 @@ source $ZSH/oh-my-zsh.sh
 # Autocompletion for directories
 cdpath=(. ~ ~/Projects)
 
-# Custom aliases
+# Custom aliases & functions
 source ~/.aliases
+source ~/.functions

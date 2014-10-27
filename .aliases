@@ -142,3 +142,22 @@ alias reload="exec $SHELL -l"
 
 # Faster npm for Europeans
 command -v npm > /dev/null && alias npme="npm --registry http://registry.npmjs.eu/"
+
+# git
+alias gl='git pull'
+alias gp='git push'
+alias gd='git diff'
+alias gc='git commit'
+alias gca='git commit -a'
+alias gco='git checkout'
+alias gb='git branch'
+alias gs='git status'
+alias gt='git log --oneline --pretty=format:"%ai - %s" --author "Hannes Wütrich" --te=short'
+alias grm="git status | grep deleted | awk '{print \$3}' | xargs git rm"
+alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'
+alias ggb='git log --show-notes=build --format=buildnotes'
+alias gg='git log --graph'
+alias gaa='git add --all'
+
+# dokku
+alias dokku="ssh -qt dokku@srv.5px.ch"
