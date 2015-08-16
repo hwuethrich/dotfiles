@@ -159,5 +159,5 @@ alias ggb='git log --show-notes=build --format=buildnotes'
 alias gg='git log --graph'
 alias gaa='git add --all'
 
-# dokku
+# Dokku
 alias dokku="ssh -qt dokku@srv.5px.ch"

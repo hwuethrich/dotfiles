@@ -1,8 +1,8 @@
 [user]
 
-	# User settings
-  email = hw@5px.ch
-  name = Hannes Wüthrich
+  	# User settings
+  	email = hw@5px.ch
+  	name = Hannes Wüthrich
 
 [alias]
 
@@ -82,7 +82,7 @@
 
 [core]
 	# Use sublime text as editor (commit messages)
-	editor = subl
+	editor = vi
 
 	# Use custom `.gitignore` and `.gitattributes`
 	excludesfile = ~/.gitignore
@@ -96,6 +96,9 @@
 	# Make `git rebase` safer on OS X
 	# More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
 	trustctime = false
+
+	# Fix umlaute
+	precomposeunicode = true
 
 [color]
 
@@ -181,3 +184,5 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+[url "https://github.com"]
+	insteadOf = git://github.com
