@@ -30,7 +30,7 @@ ZSH_THEME="robbyrussell"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
+# COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -49,11 +49,11 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git ruby rbenv sublime brew bundler)
+plugins=(git ruby rbenv brew bundler docker docker-compose osx)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -65,15 +65,8 @@ export LANG=en_US.UTF-8
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='subl'
+  export EDITOR='subl -w'
 fi
-
-# Autocompletion for directories
-cdpath=(. ~ ~/Projects)
-
-# Custom aliases & functions
-source ~/.aliases
-source ~/.functions
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -89,3 +82,28 @@ source ~/.functions
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# User configuration
+
+# Autocompletion for directories
+cdpath=(. ~ ~/Projects)
+
+# Custom aliases & functions
+source ~/.aliases
+source ~/.functions
+
+# test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
+
+# Docker Toolbox
+# eval "$(docker-machine env docker)"
+# eval $(dinghy shellinit)
+
+# Dokku
+# export DOKKU_HOST=cloud.zebbra.ch
+
+# Vagrant
+export VAGRANT_DEFAULT_PROVIDER="virtualbox"
+
+# NVM
+export NVM_DIR="/Users/hannes/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
