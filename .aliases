@@ -160,4 +160,4 @@ alias gg='git log --graph'
 alias gaa='git add --all'
 
 # Dokku
-alias dokku="ssh -qt dokku@srv.5px.ch"
+alias dokku='bash $HOME/.dokku/contrib/dokku_client.sh'
